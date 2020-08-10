@@ -1,0 +1,115 @@
+﻿<Window x:Class="Tutorial1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tutorial1"
+        mc:Ignorable="d"
+        Background="#eee"
+        Title="MainWindow" Height="800" Width="360">
+    
+        <Border Margin="10 10 10 10" Background="White">
+
+        <StackPanel>
+            <!-- Button -->
+            <Grid Margin="0 10 0 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="ApplyButton" Click="ApplyButton_Click" Grid.Column="0" Content="Apply" Margin="8 0 8 0"></Button>
+                <Button x:Name="ResetButton" Click="ResetButton_Click"  Grid.Column="1" Content="Reset" Margin="8 0 8 0"></Button>
+                <Button Grid.Column="2" Content="Refresh" Margin="8 0 8 0"></Button>
+            </Grid>
+            
+            <!-- Pulse Properties-->
+            <TextBlock Text="Pulse Properties" FontWeight="Bold" Margin="8 8 8 0"></TextBlock>
+                <!-- Description -->
+            <TextBlock Text="Description" Margin="8 5 8 0"></TextBlock>
+            <TextBox x:Name="DescriptionText" Padding="2" Margin="8 0 8 0"></TextBox>
+                <!-- Status and Revision -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="8 0 8 0">
+                    <TextBlock Text="Status"></TextBlock>
+                    <TextBox Padding="2" IsReadOnly="True" Background="#eee"></TextBox>
+                </StackPanel>
+                <StackPanel Grid.Column="2" Margin="8 0 8 0">
+                    <TextBlock Text="Revision"></TextBlock>
+                    <TextBox Padding="2" IsReadOnly="True" Background="#eee"></TextBox>
+                </StackPanel>                
+            </Grid>
+                <!-- Part Number -->
+            <TextBlock Text="Part Number" Margin="8 0 8 0"></TextBlock>
+            <TextBox Padding="2" Margin="8 0 8 0" IsReadOnly="True" Background="#eee"></TextBox>
+            
+            <!-- Raw Material -->
+            <TextBlock Text="Raw Material" FontWeight="Bold" Margin="8 8 8 0"></TextBlock>
+                <!-- Material -->
+            <TextBlock Text="Material" Margin="8 5 8 0"></TextBlock>
+            <ComboBox Padding="5" Margin="8 0 8 0"></ComboBox>
+            
+            <!-- Manufacturing Information -->
+            <TextBlock Text="Manufacturing Information" FontWeight="Bold" Margin="8 8 8 0"></TextBlock>
+                <!-- Work Centres -->
+            <TextBlock Text="Work Centres" Margin="8 5 8 0"></TextBlock>
+            <Grid Margin="8 5 8 0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="0">
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Weld" Content="Weld"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Assembly" Content="Assembly"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Plasma" Content="Plasma"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Laser" Content="Laser"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Purchase" Content="Purchase"></CheckBox>
+                </StackPanel>
+                <StackPanel Grid.Column="2">
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Lathe" Content="Lathe"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Drill" Content="Drill"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Fold" Content="Fold"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Roll" Content="Roll"></CheckBox>
+                    <CheckBox Checked="ChkBox_Checked" Unchecked="ChkBox_Unhecked" x:Name="ChkBoxItem_Saw" Content="Saw"></CheckBox>
+                </StackPanel>
+            </Grid>
+                <!-- Length -->
+            <TextBlock Text="Length" Margin="8 5 8 0"></TextBlock>
+            <TextBox x:Name="TextBoxLength" Padding="2" Margin="8 0 8 0"></TextBox>
+                <!-- Mass -->
+            <TextBlock Text="Mass" Margin="8 5 8 0"></TextBlock>
+            <TextBox x:Name="TextBoxMass" Padding="2" IsReadOnly="True" Background="#eee" Margin="8 0 8 0"></TextBox>
+                <!-- Finish -->
+            <TextBlock Text="Finish" Margin="8 5 8 0"></TextBlock>
+            <ComboBox x:Name="ComboBoxFinish" SelectionChanged="ComboBoxFinish_SelectionChanged" SelectedIndex="0" Padding="5" Margin="8 0 8 0" >
+                <ComboBoxItem>Painted</ComboBoxItem>
+                <ComboBoxItem>Not Painted</ComboBoxItem>
+            </ComboBox>
+                <!-- Purchase Information -->
+            <TextBlock Text="Purchase Information" Margin="8 5 8 0"></TextBlock>
+            <ComboBox SelectedIndex="0" Padding="5" Margin="8 0 8 0" >
+                <ComboBoxItem>Rubber</ComboBoxItem>
+                <ComboBoxItem>Not Rubber</ComboBoxItem>
+            </ComboBox>
+                <!-- Supplier Name -->
+            <TextBlock Text="Supplier Name" Margin="8 5 8 0"></TextBlock>
+            <TextBox x:Name="TextBoxSupplierName" TextChanged="TextBoxSupplierName_TextChanged" Padding="2" Margin="8 0 8 0"></TextBox>
+                <!-- Supplier Code -->
+            <TextBlock Text="Supplier Code" Margin="8 5 8 0"></TextBlock>
+            <TextBox Padding="2" Margin="8 0 8 0"></TextBox>
+
+            <!-- Additional Information -->
+            <TextBlock Text="Additional Information" FontWeight="Bold" Margin="8 8 8 0"></TextBlock>
+            <!-- Note -->
+            <TextBlock Text="Note" Margin="8 5 8 0"></TextBlock>
+            <TextBox  x:Name="TextBoxNote" Padding="2" Margin="8 0 8 0"></TextBox>
+        </StackPanel>
+            
+        </Border>
+    
+</Window>

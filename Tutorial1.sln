@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial1", "Tutorial1\Tutorial1.csproj", "{35D72FF8-D363-4C3D-8A70-B6978D013695}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfTreeView", "WpfTreeView\WpfTreeView.csproj", "{58DC2184-A01A-4F2C-B816-2F75AF8F8846}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35D72FF8-D363-4C3D-8A70-B6978D013695}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D72FF8-D363-4C3D-8A70-B6978D013695}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D72FF8-D363-4C3D-8A70-B6978D013695}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D72FF8-D363-4C3D-8A70-B6978D013695}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58DC2184-A01A-4F2C-B816-2F75AF8F8846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DC2184-A01A-4F2C-B816-2F75AF8F8846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DC2184-A01A-4F2C-B816-2F75AF8F8846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58DC2184-A01A-4F2C-B816-2F75AF8F8846}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EF5E9052-2B28-4813-8668-9EFAEEE20762}
+	EndGlobalSection
+EndGlobal
